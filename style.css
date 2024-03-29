@@ -3,6 +3,35 @@
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+.navbar {
+  padding-bottom: 0px;
+}
+
+.navbar .navbar-toggler {
+  margin-bottom: 10px;
+}
+
+.nav-item {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.nav-item:hover {
+  color: #fff;
+  background-color: #333;
+  border-radius: 20px 20px 0 0;
+}
+
+.nav-active {
+  color: #000000 !important;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 0px;
+  border-bottom: 5px dashed rgb(6, 120, 220);
+}
+
 .main_con {
   /* border: 1px solid; */
   padding: 30px 10px;
@@ -37,8 +66,9 @@
 }
 
 .main_con .contain img {
+  /* margin-top: ; */
   width: 95%;
-  height: 450px;
+  height: 60vh;
   box-shadow: 3px 3px 10px black;
   overflow: hidden;
   border-radius: 5px;
@@ -75,8 +105,35 @@
 .main_con .contain img:hover + .description {
   bottom: 0px;
   height: auto;
+  transform: scale(1.01);
+  background: rgba(27, 27, 27, 1);
 }
 
 .main_con .contain img:hover + .description p {
   visibility: visible;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-item {
+    margin-left: 0px;
+  }
+
+  .nav-item:hover {
+    font-weight: bold;
+    border-radius: 20px;
+  }
+
+  .nav-active {
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    border-bottom: none;
+  }
+
+  .main_con .row {
+    padding: 20px 10px;
+  }
+  .main_con .contain img {
+    margin-top: 10vh;
+  }
 }
